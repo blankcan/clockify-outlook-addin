@@ -1,0 +1,75 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+b {
+  font-weight: bold;
+}
+
+.submit-button {
+  background-color: #03a9f4;
+  color: white;
+  border-color: #03a9f4;
+}
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px 20px;
+}
+footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #03a9f4;
+}
+.settings-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+#error-message-container{
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.error{
+    background-color: red;
+    color: white;
+    padding:15px;
+
+}
+
+.hide{
+    display: none;
+}
+
+.info{
+    background-color: #03a9f4;
+    color: white;
+    padding:15px;
+}
+
+#info-message-container{
+    margin-top: 15px;
+    padding-top: 15px;
+}

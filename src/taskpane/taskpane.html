@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clockify Time Entry</title>
+    <link
+      rel="stylesheet"
+      href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.0.0/css/fabric.min.css"
+    />
+    <link rel="stylesheet" href="./taskpane.css" />
+  </head>
+  <body>
+    <main>
+      <h2>Create Clockify Entry</h2>
+      <input type="text" id="subject" placeholder="Loading..." />
+      <label for="duration">Duration (e.g., 1h 30m):</label>
+      <input type="text" id="duration" placeholder="Enter duration" />
+
+      <button class="submit-button" id="submitBtn">Submit Time Entry</button>
+      <div id="error-message-container" class="error hide">
+        <div id="errorMessage"></div>
+      </div>
+
+      <div id="info-message-container" class="info hide">
+        <div id="infoMessage"></div>
+      </div>
+    </main>
+    <footer>
+      <button class="settings-btn" id="settingsBtn" title="Settings">Settings</button>
+    </footer>
+
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="taskpane.js"></script>
+    <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../helpers/addin-config.js"></script>
+    <script src="../helpers/clockify-api.js"></script>
+
+  </body>
+</html>
