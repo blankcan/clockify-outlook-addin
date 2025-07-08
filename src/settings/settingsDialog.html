@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Clockify Settings</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      width: 100%;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Clockify Settings</h2>
+
+  <label for="apiKey">API Key:</label>
+  <input type="text" id="apiKey" placeholder="Your Clockify API Key" />
+
+  <label for="workspaceId">Workspace ID:</label>
+  <input type="text" id="workspaceId" placeholder="Your Workspace ID" />
+
+  <label for="projectId">Default Project ID (optional):</label>
+  <input type="text" id="projectId" placeholder="Your Default Project ID" />
+
+  <button id="saveBtn">Save</button>
+
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script src="settings-dialog.js"></script>
+
+</body>
+</html>
