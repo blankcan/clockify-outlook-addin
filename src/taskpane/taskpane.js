@@ -7,7 +7,7 @@
 import parseDuration from "parse-duration";
 import URI from "urijs";
 import { getConfig, setConfig } from "../helpers/addin-config";
-import { createTimeEntry } from '../helpers/clockify-api.js';
+import { createTimeEntry } from "../helpers/clockify-api.js";
 (function () {
   "use strict";
 
@@ -26,6 +26,11 @@ import { createTimeEntry } from '../helpers/clockify-api.js';
       $("#submitBtn").on("click", onSubmit);
 
       $("#settingsBtn").on("click", openSettings);
+
+      $(".quick-btn").on("click", (e) => {
+        const duration = $(e.target).data("duration");
+        $("#duration").val(duration);
+      });
     });
 
     const onSubmit = () => {
@@ -57,15 +62,15 @@ import { createTimeEntry } from '../helpers/clockify-api.js';
       const durationSeconds = Math.floor(durationMs / 1000);
       showInfo(`Submitting time entry for ${durationSeconds} seconds...`);
 
-      if(durationSeconds < 1) {
+      if (durationSeconds < 1) {
         showError("Duration must be at least 1 second.");
         return;
       }
 
-      handleCreateTimeEntry(durationMs,subject);
+      handleCreateTimeEntry(durationMs, subject);
     };
 
-    async function handleCreateTimeEntry(durationMs,subject) {
+    async function handleCreateTimeEntry(durationMs, subject) {
       const config = getConfig();
       const { clockifyApiKey, clockifyWorkspaceId, clockifyProjectId } = config;
 
